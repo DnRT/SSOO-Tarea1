@@ -13,8 +13,9 @@ int main(){
     printf("Programa hora ejecutandose. PIR:%d\n", test);
     printf("Listo para recibir la señal SIGUSR1.\n");
     signal(SIGINT, salir);
-    signal(SIGUSR1,hora);
     while(ctrC<2){
+        signal(SIGUSR1,hora);
+        sleep(0);
     }
     return 0;
 }
